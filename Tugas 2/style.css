@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    background-image: url(pattern.jpg);
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    background-color: bisque;
+  }
+  li {
+    display: inline;
+    margin: 15px;
+  }
+  img {
+    height: 50px;
+    width: auto;
+  }
+  main{
+    background-color: thistle;
+    margin: 50px 150px 30px;
+    padding: 10px;
+    border-radius: 2px
+  }
+
+  a{
+    text-decoration: none;
+  }
+  footer{
+    background-color: black;
+    color: aliceblue;
+ }
+ footer p{
+    text-align: center;
+    padding: 10px;
+ }
+
+ h1{
+    text-align: center;
+ }
+ article{
+    border-bottom: 2px black solid ;
+ }

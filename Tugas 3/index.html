@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tugas bootstrap</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+  </head>
+
+  <body>
+    <header>
+      <!-- Nav 1 -->
+      <ul class="nav justify-content-end bg-warning">
+        <li class="nav-item">
+          <a class="nav-link text-light">Gift Card</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="#">Track Ordeer</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="#">Contact Us</a>
+        </li>
+      </ul>
+
+      <!-- Nav 2 -->
+      <nav class="navbar bg-warning">
+        <div class="container-fluid">
+          <a class="navbar-brand">
+            <img src="logo.png" alt="" />
+          </a>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              <i class="bi bi-search"></i>
+            </button>
+          </form>
+        </div>
+      </nav>
+
+      <!-- Nav 3 -->
+
+      <ul class="nav justify-content-center bg-danger mx-3 my-2">
+        <li class="nav-item">
+          <a class="nav-link text-light" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="#">Shop</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="#">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="#">About Us</a>
+        </li>
+      </ul>
+    </header>
+
+    <main>
+      <div class="container">
+        <div class="row">
+          <!-- Column 1 -->
+          <div class="col-2">
+            <ul class="list-group">
+              <li class="list-group-item">A simple default list group item</li>
+
+              <li class="list-group-item list-group-item-primary">
+                A simple primary list group item
+              </li>
+              <li class="list-group-item list-group-item-secondary">
+                A simple secondary list group item
+              </li>
+              <li class="list-group-item list-group-item-success">
+                A simple success list group item
+              </li>
+              <li class="list-group-item list-group-item-danger">
+                A simple danger list group item
+              </li>
+              <li class="list-group-item list-group-item-warning">
+                A simple warning list group item
+              </li>
+              <li class="list-group-item list-group-item-info">
+                A simple info list group item
+              </li>
+              <li class="list-group-item list-group-item-light">
+                A simple light list group item
+              </li>
+              <li class="list-group-item list-group-item-dark">
+                A simple dark list group item
+              </li>
+            </ul>
+          </div>
+          <!-- Column 2 -->
+          <div class="col-8">
+            <!-- Jumbotron / Slider -->
+            <div id="carouselExample" class="carousel slide">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="https://images.tokopedia.net/img/cache/1208/NsjrJu/2025/8/2/ba82d048-aa9a-4206-8b71-e1515a147aab.jpg"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="https://images.tokopedia.net/img/cache/1208/NsjrJu/2025/8/6/20f11cc0-1ad1-4513-a007-84838d8d1428.jpg"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="https://images.tokopedia.net/img/cache/1208/NsjrJu/2025/8/1/cfdbc576-90e4-40d8-b5e3-48a5171d8b8e.jpg"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExample"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExample"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+
+            <!-- Card -->
+
+            <div class="row mt-3">
+              <div class="col">
+                <div class="card">
+                  <img
+                    src="https://images.tokopedia.net/img/cache/200-square/hDjmkQ/2024/12/4/3daedcde-dff1-4132-b9ec-018635b041b7.jpg"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">1 K</h5>
+                    <p class="card-text">
+                      Parfum Pria Lorem ipsum dolor sit, amet 
+                    </p>
+                    <a href="#" class="btn btn-primary"
+                      ><i class="bi bi-cart"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card">
+                  <img
+                    src="https://images.tokopedia.net/img/cache/200-square/VqbcmM/2025/3/28/c877c047-e753-486a-9c03-54d1e4958419.png"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">2 K</h5>
+                    <p class="card-text">
+                      Ipon 16 pro mak, Lorem ipsum dolor sit, amet
+                    </p>
+                    <a href="#" class="btn btn-primary"
+                      ><i class="bi bi-cart"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card">
+                  <img
+                    src="https://images.tokopedia.net/img/cache/200-square/VqbcmM/2025/2/13/ff127d6f-403f-4b01-be64-4a91f8677169.jpg"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">3 K</h5>
+                    <p class="card-text">
+                      Sepatu olahraga, Lorem ipsum dolor sit, amet
+                    </p>
+                    <a href="#" class="btn btn-primary"
+                      ><i class="bi bi-cart"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 3 -->
+          <div class="col-2">
+            <ul class="list-group">
+              <li class="list-group-item">An item</li>
+              <li class="list-group-item">A second item</li>
+              <li class="list-group-item">A third item</li>
+              <li class="list-group-item">A fourth item</li>
+              <li class="list-group-item">And a fifth one</li>
+            </ul>
+
+            <form class="mt-3">
+                <h1>Login Form</h1>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="mb-3 form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
