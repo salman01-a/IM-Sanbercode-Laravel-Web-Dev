@@ -19,11 +19,13 @@ $sungokong = new Ape("kera sakti");
 // echo $sungokong->legs;
 echo "Name: ".$sungokong->name. "<br>"; 
 echo "legs: ".$sungokong->legs ."<br>"; 
-echo "cold_blooded: ".$sungokong->cold_blooded . "<br> <br> "; 
+echo "cold_blooded: ".$sungokong->cold_blooded . " <br> ";
+echo "Yell: ". $sungokong->yell(). "<br> <br> ";
 
 $kodok = new Frog("buduk");
 // echo $kodok->jump() ; // "hop hop"
 echo "Name: ".$kodok->name. "<br>"; 
 echo "legs: ".$kodok->legs ."<br>"; 
-echo "cold_blooded: ".$kodok->cold_blooded . "<br> <br> "; 
+echo "cold_blooded: ".$kodok->cold_blooded . "<br> ";
+echo "Jump: " . $kodok->jump() ."<br>"; 
 ?>
