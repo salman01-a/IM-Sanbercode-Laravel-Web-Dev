@@ -1,0 +1,36 @@
+1. Buat Data Base 
+CREATE DATABASE myshop
+
+2. Membuat Table
+    - Membuat Table users
+    CREATE TABLE users(id	INTEGER AUTO INCREMENT PRIMARY KEY, name varchar(255), email varchar(255), password	varchar(255));
+
+    - Membuat Table categories
+    CREATE TABLE categories(id INTEGER AUTO INCREMENT PRIMARY KEY,name varchar(255));
+
+    - Membuat Table items
+    CREATE TABLE items ( id INTEGER AUTO INCREMENT PRIMARY KEY, name varchar(255), description varchar(255), price integer,stock integer,category_id	integer ,FOREIGN KEY (category_id) REFERENCES categories(id));
+
+3. Memasukkan Data pada Table
+    - Memasukan Data users
+    INSERT INTO users (name,email,password) VALUES ("John Doe","john@doe.com",	"john123"), ("Jane Doe","jane@doe.com","jenita123");
+
+    - Memasukan Data categories
+    INSERT INTO categories (name) VALUES ("gadget"), ("cloth"),("men"), ("women"), ("branded");
+
+    - Memasukan Data items
+    INSERT INTO items (name , description, price , stock, category_id) VALUES ("Sumsang b50","hape keren dari merek sumsang",4000000,100,1),
+                        ("Uniklooh",	"baju keren dari brand ternama",	500000,	50,	2),
+                        ("IMHO Watch",	"jam tangan anak yang jujur banget',	2000000,	10,	1);
+4. Mengambil Data dari Database
+    a. Mengambil data users
+       SELECT name, email FROM users;
+
+    b. Mengambil data items
+        -SELECT * FROM `items` WHERE price >= 1000000;
+        -SELECT * FROM `items` WHERE name LIKE "%watch%"
+    c. Menampilkan data items join dengan kategori
+        select items.name, items.description, items.price, items.stock,items.category_id, categories.name from items join categories on items.category_id = categories.id;
+        
+5. Mengubah Data dari Database
+    UPDATE items set price =2500000 WHERE name="Sumsang b50";
