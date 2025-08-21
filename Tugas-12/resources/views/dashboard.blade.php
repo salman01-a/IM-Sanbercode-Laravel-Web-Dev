@@ -1,29 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Halaman Index</title>
-</head>
-<body>
-    <h1>SanberBook</h1>
+@extends('layout.master')
 
-    <h2>Social Media Developer Santai dan Berkualitas</h2>
+@section('title')
+    Home
+@endsection
 
-    <p>Belajar dan Berbagi agar hidup ini semakin santai berkualitas</p>
-    <h3>Benefit Join di SanberBook</h3>
+@section('content')
+    
+<h1>SanberBook</h1>
 
-   <ul>
-    <li>Mendapatkan motivasi dari sesama developer</li>
-    <li>Sharing knowledge dari mastah Sanber</li>
-    <li>Dibuat oleh calon web developer terbaik</li>
-   </ul>
+<h2>Social Media Developer Santai dan Berkualitas</h2>
 
-   <h3>Cara Bergabung ke SanberBook</h3>
-   <ol>
-    <li>Mengunjungi Website ini</li>
-    <li>Mendaftar di <a href="/register">Form Sign Up</a></li>
-    <li>Selesai!</li>
-   </ol>
-</body>
-</html>
+<p>Belajar dan Berbagi agar hidup ini semakin santai berkualitas</p>
+<h3>Benefit Join di SanberBook</h3>
+
+<ul>
+<li>Mendapatkan motivasi dari sesama developer</li>
+<li>Sharing knowledge dari mastah Sanber</li>
+<li>Dibuat oleh calon web developer terbaik</li>
+</ul>
+
+<h3>Cara Bergabung ke SanberBook</h3>
+<ol>
+<li>Mengunjungi Website ini</li>
+<li>Mendaftar di <a href="/register">Form Sign Up</a></li>
+<li>Selesai!</li>
+</ol>
+@endsection
