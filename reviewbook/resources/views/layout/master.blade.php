@@ -40,7 +40,7 @@
 
  
 @include('partial.header')
-  <main class="main" style="height : 80vh">
+  <main class="main">
     <!-- Page Title -->
     <div class="page-title accent-background">
       <div class="container d-lg-flex justify-content-between align-items-center">

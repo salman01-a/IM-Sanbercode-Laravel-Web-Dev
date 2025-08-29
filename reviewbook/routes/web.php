@@ -4,6 +4,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FormController;
 use App\Http\Controllers\GenreController;
+use App\Http\Controllers\BooksController;
+use App\Models\Books;
+
 Route::get('/', [DashboardController::class, 'dashboard']);
 Route::get('/register', [FormController::class, 'register']);
 Route::post('/daftar', [FormController::class, 'submit']);
@@ -28,3 +31,5 @@ Route::put('/genre/{id}', [GenreController::class,'update']);
 //Delete
 Route::delete('/genre/{id}', [GenreController::class,'destroy']);
 
+//CRUD Books
+Route::resource('books', BooksController::class);
