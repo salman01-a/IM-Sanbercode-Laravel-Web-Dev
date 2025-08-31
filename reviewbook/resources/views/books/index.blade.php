@@ -5,9 +5,14 @@
 @endsection
 
 @section('content')
+@auth
+@if (Auth()->user()->role === "admin")
 <div class="mb-4">
-    <a href="{{ route('books.create') }}" class="btn btn-primary">Tambah</a>
+    <a href="/books/create" class="btn btn-primary">Tambah</a>
 </div>
+
+@endif
+@endauth
 
 <div class="row">   
     @forelse ($books as $item)
@@ -19,16 +24,21 @@
                      style="height: 350px; object-fit: cover;">
                 <div class="card-body">
                     <h5 class="card-title">{{ $item->title }}</h5>
+                    <span class="badge bg-primary">{{$item->genre->name}}</span>
                     <p class="card-text">{{ Str::limit($item->summary, 80) }}</p>
                 </div>
                 <div class="card-footer d-flex justify-content-between">
                     <a href="/books/{{$item->id}}" class="btn btn-sm btn-info">Detail</a>
+                    @auth
+                    @if (Auth()->user()->role === "admin")
                     <a href="/books/{{$item->id}}/edit" class="btn btn-sm btn-warning">Edit</a>
                     <form action="/books/{{$item->id}}" method="POST" class="d-inline">
                         @csrf
                         @method('DELETE')
                         <button class="btn btn-sm btn-danger">Hapus</button>
                     </form>
+                    @endif
+                    @endauth
                 </div>
             </div>          
         </div>

@@ -10,10 +10,20 @@
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="/">Home</a></li>
-          <li><a href="/register">Daftar</a></li>
           <li><a href="/books">Books</a></li>
           <li><a href="/genre">Genre</a></li>
-        </ul>
+          <li><a href="/profile">Profile</a></li>
+          @guest
+          <li><a href="/login">Login</a></li>
+          @endguest
+          @auth
+        </li><form action="/logout" method="POST">
+          @csrf
+          <button type="submit" class="btn">Logout</button>
+        </form>
+        <li>
+          @endauth
+        </ul> 
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
     </div>

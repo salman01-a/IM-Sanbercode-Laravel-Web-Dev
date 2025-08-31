@@ -2,12 +2,26 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Middleware\isAdmin;
 use Illuminate\Http\Request;
 use App\Models\Genre;
 use App\Models\Books;
+use App\Models\Comment;
 use Illuminate\Support\Facades\File;
-class BooksController extends Controller
+use Illuminate\Routing\Controllers\HasMiddleware;
+use Illuminate\Routing\Controllers\Middleware;
+use Illuminate\Support\Facades\Auth;
+
+class BooksController extends Controller implements HasMiddleware
 {
+    public static function middleware(): array
+    {
+        return [
+           
+            new Middleware(['auth',isAdmin::class], except: ['index', 'show']),
+        ];
+    }
+
     /**
      * Display a listing of the resource.
      */
@@ -58,7 +72,7 @@ class BooksController extends Controller
         
             $books->save();
         
-            redirect('/books');
+            return redirect('/books');
 
     }
 
@@ -125,6 +139,9 @@ class BooksController extends Controller
     {
         $books = Books::find($id);
         $books -> delete();
-        return view('/books'); 
+        return redirect('/books'); 
     }
+
+
+
 }

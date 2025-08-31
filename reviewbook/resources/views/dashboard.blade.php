@@ -1,10 +1,27 @@
 @extends('layout.master')
 
 @section('title')
+    @auth
+   Welcome Home, {{Auth()->user()->name}} 
+    @endauth 
+    @guest    
     Home
+    @endguest
 @endsection
 
 @section('content')
+@if (session('danger'))
+    <div class="alert alert-danger">
+        {{session('danger')}}
+    </div>
+@endif
+
+@if (session('success'))
+    <div class="alert alert-success">
+        {{session('success')}}
+    </div>
+@endif
+
     
 <h1>SanberBook</h1>
 
